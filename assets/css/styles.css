@@ -280,10 +280,13 @@ section p {
 }
 
 section:not(.hero):nth-child(odd) {
-    background-color: rgba(202, 240, 248, 0.29);
+    
+    background-image: linear-gradient(rgba(0, 119, 182, 0.29), rgba(202, 240, 248, 0.29));
 }
 section:not(.hero):nth-child(even) {
-    background-color: rgba(0, 119, 182, 0.29);
+    background-image: linear-gradient(rgba(202, 240, 248, 0.29), rgba(0, 119, 182, 0.29));
+
+   
 }
 
 #application:nth-child(even), #contact:nth-child(even) {
@@ -390,6 +393,70 @@ video {
     text-decoration: underline;
     
 }
+footer {
+    background-image:
+      linear-gradient(
+        to right, 
+        #f1f3fc,
+        #f1f3fc 15%,
+        #fff 45%,
+        #fff 65%,
+        #f1f3fc 85%
+      );
+      color: black;
+  }
+  
+  .footer-text {
+    text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+#witech {
+    opacity: 0.8;
+    animation: witech-link-color 12s ease-in-out alternate infinite ;
+  
+    
+  }
+  
+  
+  @keyframes witech-link-color {
+    0% {
+  
+      
+      
+      color: rgb(14, 180, 14, 0.8);
+  
+    }
+  
+    25% {
+      
+      color: rgb(78, 172, 78);
+    }
+  
+    50% {
+      
+      
+      color: rgb(224, 20, 20, 0.9);
+  
+    }
+  
+  
+    75% {
+      
+     
+      color: rgb(245, 191, 76);
+      
+      
+    }
+  
+    100% {
+      
+      
+      color: rgb(233, 233, 19, 1);  
+  
+    }
+  }
 
 @media (max-width: 800px) {
     section {
