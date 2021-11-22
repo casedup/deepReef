@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            height: 200px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            margin: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <img src="" alt="">
+        <button></button>
+    </div>
+
+    <script>
+        const btn = document.querySelector('button');
+        const img = document.querySelector('img');
+        const header = document.querySelector('h1');
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('locked and loaded');
+            const xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState === 4 && xhr.status === 200)
+                {
+                    let rep = JSON.parse(xhr.responseText);
+                    btn.innerText = 'Get a Dog';
+                    header.innerText = 'Adopt a Puppy!';
+                    
+                    console.log(rep);
+                    img.src = rep.message;
+                }
+            }
+            xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
+            xhr.send();
+        });
+        
+
+        btn.addEventListener('click', function() {
+        const xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if(xhr.readyState === 4 && xhr.status === 200)
+                {
+                    let rep = JSON.parse(xhr.responseText);
+                    console.log(rep);
+                    img.src = rep.message;
+                }
+            }
+            xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
+            xhr.send();
+
+        });
+    </script>
+</body>
+</html>

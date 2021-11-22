@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br><br>
+    <div>
+        Current BTC Price:
+        <p>
+            
+        </p>
+        <button></button>
+    </div>
+    <script>
+        const btn = document.querySelector('button');
+        const para = document.querySelector('p');
+
+        btn.innerText = 'Click for Price';
+        btn.addEventListener('click', function () {
+            const xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState === 4 && xhr.status === 200)
+                {
+                    let data = JSON.parse(xhr.responseText);
+                    console.log(data);
+                    
+                    para.innerHTML = `${data.bpi.USD.symbol}${data.bpi.USD.rate} 
+                    <br><br>
+                    ${data.bpi.GBP.symbol}${data.bpi.GBP.rate}`
+                }
+            }
+
+
+            xhr.open('GET', 'https://api.coindesk.com/v1/bpi/currentprice.json');
+            xhr.send();
+        })
+    </script>
+</body>
+</html>
