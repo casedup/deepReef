@@ -186,22 +186,22 @@ a.btn:hover, button.btn:hover {
     border-radius: 100px;
     transition: transform .2s;
     position: relative;
+    color: #0077b6;
 }
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    
+    
 }
 .btn:active {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    
 }
 
-.btn-white {
-    background-image: linear-gradient(to right bottom,
-    rgba(239, 245, 247, 0.884),
-    rgba(208, 232, 245, 0.836));
-    color: #777;
-}
+
 
 .btn::after {
     /* ! must match :active element to work correctly */
@@ -219,16 +219,23 @@ a.btn:hover, button.btn:hover {
     
 
 }
-.btn-animated {
-    /* @backwards apply the styles of 0% before animation starts */
-    animation: moveInBottom .5s ease-out .75s backwards;
+.btn-white {
+    background-image: linear-gradient(to right bottom,
+    rgba(239, 245, 247, 0.884),
+    rgba(208, 232, 245, 0.836));
+    color: #0077b6;
 }
-
 .btn-white::after {
     background-image: linear-gradient(to right bottom,
     rgba(239, 245, 247, 0.884),
     rgba(208, 232, 245, 0.836));
 }
+.btn-animated {
+    /* @backwards apply the styles of 0% before animation starts */
+    animation: moveInBottom .5s ease-out .75s backwards;
+}
+
+
 
 .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
