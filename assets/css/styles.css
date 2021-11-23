@@ -360,18 +360,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #607d8b;
-    
     padding: 5px 0;
-    background-image:
-    linear-gradient(
-      to right, 
-      #f1f3fc,
-      #f1f3fc 15%,
-      #fff 45%,
-      #fff 65%,
-      #f1f3fc 85%
-    );
+    background-image: linear-gradient(rgba(0, 119, 182, 0.29), rgba(202, 240, 248, 0.29));
     color: black;
 
 }

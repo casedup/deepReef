@@ -1,3 +1,13 @@
 {
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "colorWheel.settings.workspaceColor": "hsl(267,68%,33%)",
+    "workbench.colorCustomizations": {
+        "activityBar.foreground": "#9FDE53",
+        "activityBar.background": "#2B0F4D",
+        "activityBar.border": "#CEDE53",
+        "titleBar.activeForeground": "#9FDE53",
+        "titleBar.activeBackground": "#2B0F4D",
+        "window.activeBorder": "#71DE53",
+        "window.inactiveBorder": "#389A1D"
+    }
 }
