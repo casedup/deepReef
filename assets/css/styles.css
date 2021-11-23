@@ -75,18 +75,7 @@ div.form-group {
   
     }
   }
-header a {
-    opacity: 1;
-    font-size: 20px;
-    transition: color 1.4s;
-    font-family: "Rubik", cursive;
-}
 
-header a:hover {
-    opacity: 0.6;
-    text-decoration: none;
-    
-}
 
 header {
     position: absolute;
@@ -98,6 +87,22 @@ header {
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
     z-index: 2;
+    font-family: "Montserrat";
+    font-weight: 700;
+
+}
+
+header a {
+    opacity: 1;
+    font-size: 20px;
+    transition: color 1.4s;
+    
+}
+
+header a:hover {
+    opacity: 0.6;
+    text-decoration: none;
+    
 }
 
 @keyframes fadein {
@@ -107,7 +112,10 @@ header {
 }
 
 header h1 {
-    font-family: "Quicksand", sans-serif;
+    
+    font-family: "Montserrat";
+    font-weight: 700;
+    letter-spacing: 3px;
     color: #0077b6;
 }
 
@@ -123,6 +131,8 @@ header nav li {
 }
 
 header nav li a {
+
+    
     color: #0077b6;
     text-decoration: none;
 
@@ -219,6 +229,12 @@ a.btn:hover, button.btn:hover {
     
 
 }
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+
 .btn-white {
     background-image: linear-gradient(to right bottom,
     rgba(239, 245, 247, 0.884),
@@ -230,6 +246,7 @@ a.btn:hover, button.btn:hover {
     rgba(239, 245, 247, 0.884),
     rgba(208, 232, 245, 0.836));
 }
+
 .btn-animated {
     /* @backwards apply the styles of 0% before animation starts */
     animation: moveInBottom .5s ease-out .75s backwards;
@@ -237,10 +254,6 @@ a.btn:hover, button.btn:hover {
 
 
 
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
 
 section {
     display: flex;
