@@ -279,6 +279,7 @@ section {
     font-family: "Montserrat", cursive;
     margin-bottom: 40px;
     font-weight: 400;
+    text-transform: capitalize;
 
 }
 
