@@ -272,6 +272,7 @@ section {
     margin-bottom: 15px;
     font-weight: 900;
     letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 .hero h3 {
