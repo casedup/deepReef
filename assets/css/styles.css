@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton:wght@400&Baloo+Thambi+2&family=Raleway&family=Rubik&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100&family=Montserrat:wght@100;400;500;700;900&family=Roboto:wght@400;700;900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +23,9 @@ ul {
 a {
     text-decoration: none;
     opacity: 0.75;
+}
+body {
+    background-image: linear-gradient(rgba(202, 240, 248, 0.29), rgba(0, 119, 182, 0.29));
 }
 
 div.form-group {
@@ -128,7 +131,7 @@ input[type="text"]:focus, textarea.form-control:focus {
     background-color : rgba(0, 119, 182, 0.09); 
   }
 
-.btn {
+/* .btn {
     color: #fff;
     background-color: #023e8a;
 }
@@ -150,7 +153,10 @@ a.btn, button.btn {
     );
     opacity: .7;
     color: whitesmoke;
+    padding: 20px 46px;
+
 }
+
 
 a.btn:hover, button.btn:hover {
     color: #caf0f8;
@@ -167,6 +173,66 @@ a.btn:hover, button.btn:hover {
     opacity: 1;
     color: azure;
 
+} */
+
+/* !new button markup */
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: transform .2s;
+    position: relative;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-image: linear-gradient(to right bottom,
+    rgba(239, 245, 247, 0.884),
+    rgba(208, 232, 245, 0.836));
+    color: #777;
+}
+
+.btn::after {
+    /* ! must match :active element to work correctly */
+    content: "";
+    display: inline-block;
+    /* ! treated as a child of :active element */
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    transition: opacity .3s, transform .4s;
+    
+
+}
+.btn-animated {
+    /* @backwards apply the styles of 0% before animation starts */
+    animation: moveInBottom .5s ease-out .75s backwards;
+}
+
+.btn-white::after {
+    background-image: linear-gradient(to right bottom,
+    rgba(239, 245, 247, 0.884),
+    rgba(208, 232, 245, 0.836));
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
 }
 
 section {
@@ -188,35 +254,31 @@ section {
     text-align: center;
     min-height: 92vh;
     z-index: 1;
-
-}
-
-.hero .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 94vh;
+    background-image: linear-gradient(to right bottom,
+    rgba(239, 245, 247, 0.884),
+    rgba(208, 232, 245, 0.836)),
+     url("../img/deep-reef.jpg");
+    background-position: center;
     background-size: cover;
-    background-color: #80a3db;
-    opacity: 0.1;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+
+
 }
+
 
 .hero h1 {
-    font-family: "Anton", cursive;
+    font-family: "Montserrat", cursive;
     margin-bottom: 15px;
-    font-weight: 400;
+    font-weight: 900;
+    letter-spacing: 5px;
 }
 
 .hero h3 {
-    font-family: "Anton", cursive;
+    font-family: "Montserrat", cursive;
     margin-bottom: 40px;
     font-weight: 400;
 
-}
-
-.hero a.btn {
-    padding: 20px 46px;
 }
 
 
