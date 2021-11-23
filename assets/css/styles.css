@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton:wght@400&Baloo+Thambi+2&family=Raleway&family=Rubik&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -75,6 +76,7 @@ header a {
     opacity: 1;
     font-size: 20px;
     transition: color 1.4s;
+    font-family: "Rubik", cursive;
 }
 
 header a:hover {
@@ -181,16 +183,12 @@ section {
 }
 
 .hero {
-    position: relative;
+
     justify-content: center;
     text-align: center;
-    min-height: 100vh;
+    min-height: 92vh;
     z-index: 1;
 
-}
-
-.hero-content-area {
-    color: #023e8a;
 }
 
 .hero .background-image {
@@ -198,20 +196,22 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 94vh;
     background-size: cover;
     background-color: #80a3db;
-    opacity: 0.15;
+    opacity: 0.1;
 }
 
 .hero h1 {
-    font: bold 60px "Open Sans", sans-serif;
+    font-family: "Anton", cursive;
     margin-bottom: 15px;
+    font-weight: 400;
 }
 
 .hero h3 {
-    font: normal 28px "Open Sans", sans-serif;
+    font-family: "Anton", cursive;
     margin-bottom: 40px;
+    font-weight: 400;
 
 }
 
@@ -219,7 +219,11 @@ section {
     padding: 20px 46px;
 }
 
+
+
 .hero-content-area {
+    color: #023e8a;
+    font-family: "Baloo Thambi 2", cursive;
     opacity: 0;
     margin-top: 100px;
     animation: 1s slidefade 1s forwards;
@@ -357,8 +361,18 @@ footer {
     align-items: center;
     justify-content: space-around;
     background-color: #607d8b;
-    color: #fff;
-    padding: 20px 0;
+    
+    padding: 5px 0;
+    background-image:
+    linear-gradient(
+      to right, 
+      #f1f3fc,
+      #f1f3fc 15%,
+      #fff 45%,
+      #fff 65%,
+      #f1f3fc 85%
+    );
+    color: black;
 
 }
 
@@ -372,7 +386,7 @@ footer ul li {
 
 footer p {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0.6;
     align-self: center;
 }
@@ -393,27 +407,14 @@ video {
     text-decoration: underline;
     
 }
-footer {
-    background-image:
-      linear-gradient(
-        to right, 
-        #f1f3fc,
-        #f1f3fc 15%,
-        #fff 45%,
-        #fff 65%,
-        #f1f3fc 85%
-      );
-      color: black;
-  }
-  
+
   .footer-text {
     text-decoration: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 2px 0;
   }
 
 #witech {
-    opacity: 0.8;
+    
     animation: witech-link-color 12s ease-in-out alternate infinite ;
   
     
@@ -425,7 +426,7 @@ footer {
   
       
       
-      color: rgb(14, 180, 14, 0.8);
+      color: rgb(14, 180, 14);
   
     }
   
@@ -437,7 +438,7 @@ footer {
     50% {
       
       
-      color: rgb(224, 20, 20, 0.9);
+      color: rgb(224, 20, 20);
   
     }
   
@@ -453,7 +454,7 @@ footer {
     100% {
       
       
-      color: rgb(233, 233, 19, 1);  
+      color: rgb(233, 233, 19);  
   
     }
   }
