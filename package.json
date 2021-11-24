@@ -1,0 +1,25 @@
+{
+  "name": "deep-reef",
+  "version": "1.0.0",
+  "description": "deep reef gaming launch site",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass ./assets/sass/main.scss ./assets/css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casedup/deepReef.git"
+  },
+  "author": "witech.vi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/casedup/deepReef/issues"
+  },
+  "homepage": "https://github.com/casedup/deepReef#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
