@@ -44,7 +44,6 @@ div.form-group {
 @keyframes now-hiring {
     0% {
       color: rgb(2, 62, 138, 0.8);
-  
     }
   
     25% {
@@ -58,14 +57,11 @@ div.form-group {
       color: rgb(5, 87, 194);
   
     }
-  
-  
+
     75% {
-      
-     
+
       color: rgb(3, 61, 138, 0.8);
-      
-      
+
     }
   
     100% {
@@ -75,7 +71,6 @@ div.form-group {
   
     }
   }
-
 
 header {
     position: absolute;
@@ -95,14 +90,12 @@ header {
 header a {
     opacity: 1;
     font-size: 20px;
-    transition: color 1.4s;
-    
+    transition: color 1.4s; 
 }
 
 header a:hover {
     opacity: 0.6;
-    text-decoration: none;
-    
+    text-decoration: none;  
 }
 
 @keyframes fadein {
@@ -122,8 +115,6 @@ header h1 {
 header nav {
     display: flex;
     margin-right: -15px;
-
-
 }
 
 header nav li {
@@ -252,7 +243,7 @@ a.btn:hover, button.btn:hover {
     animation: moveInBottom .5s ease-out .75s backwards;
 }
 
-
+/* ! end btn markup */
 
 
 section {
